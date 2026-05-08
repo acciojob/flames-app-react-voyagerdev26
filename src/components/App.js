@@ -20,6 +20,7 @@ const App=()=>{
                     s1.splice(i,1);
                     s2.splice(j,1);
                     i--;
+                    break;
                 }
             }
         }
