@@ -9,11 +9,12 @@ const App=()=>{
 
     function handleSubmit(e){
         if(data1.current.value=="" || data2.current.value==""){
-            alert(`Please Enter valid input`);
+            // alert(`Please Enter valid input`);
+            setAnswer(`Please Enter valid input`);
             return;
         }
         e.preventDefault();
-        let s1=data1.current.value.toLowerCase().split('');;
+        let s1=data1.current.value.toLowerCase().split('');
         let s2=data2.current.value.toLowerCase().split('');
         for(let i=0;i<s1.length;i++){
             for(let j=0;j<s2.length;j++){
@@ -25,7 +26,7 @@ const App=()=>{
                 }
             }
         }
-        console.log('tick');
+        // console.log('tick');
         // let outputArr=["Siblings","Friends","Love","Affection","Marriage","Enemy"];
         let outputObj={
             1:"Friends",
@@ -47,7 +48,7 @@ const App=()=>{
 
     return (
         <div>
-            <form onSubmit={(e)=>{handleSubmit(e)}}>
+            <form onSubmit={handleSubmit}>
 
                 <input data-testid="input1" placeholder="Enter first name" name="name1" type="text" ref={data1}></input>
                 <input data-testid="input2" placeholder="Enter second name" name="name2" type="text" ref={data2}></input>
