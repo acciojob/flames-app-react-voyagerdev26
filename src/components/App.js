@@ -10,6 +10,7 @@ const App=()=>{
     function handleSubmit(e){
         if(data1.current.value=="" || data2.current.value==""){
             alert(`Please Enter valid input`);
+            return;
         }
         e.preventDefault();
         let s1=data1.current.value.toLowerCase().split('');;
@@ -24,8 +25,18 @@ const App=()=>{
                 }
             }
         }
-        let outputArr=["Siblings","Friends","Love","Affection","Marriage","Enemy"];
-        setAnswer(outputArr[(s1.length+s2.length)%6]);
+        console.log('tick');
+        // let outputArr=["Siblings","Friends","Love","Affection","Marriage","Enemy"];
+        let outputObj={
+            1:"Friends",
+            2:"Love",
+            3:"Affection",
+            4:"Marriage",
+            5:"Enemy",
+            0:"Siblings"
+        }
+        // setAnswer(outputArr[(s1.length+s2.length)%6]);
+        setAnswer(outputObj[`${(s1.length+s2.length)%6}`]);
     }
     function handleClear(e){
         e.preventDefault();
