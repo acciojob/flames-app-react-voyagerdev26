@@ -1,7 +1,7 @@
 // import React, { useState,useRef} from "react";
 import React from "react";
 import '../styles/App.css';
-
+import Flames from "./Flames";
 const App=()=>{
 
     // let [answer,setAnswer]= useState("");

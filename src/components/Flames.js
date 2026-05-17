@@ -14,7 +14,7 @@ const Flames = () => {
   const [inputOne, setInputOne] = useState('')
   const [inputTwo, setInputTwo] = useState('')
   const [output, setOutput] = useState('')
-  
+
   const logicFunc = (str1, str2) => {
     let arr = new Array(128).fill(0)
     for(let i of str1){
